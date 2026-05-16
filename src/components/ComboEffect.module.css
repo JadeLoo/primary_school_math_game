@@ -1,0 +1,55 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: particleBurst ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes particleBurst {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--dx, 0px), var(--dy, 0px)) scale(0);
+  }
+}
+
+.comboText {
+  animation: comboPopIn 0.5s ease-out;
+  z-index: 10;
+}
+
+.comboLabel {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #FF6B6B;
+  text-shadow:
+    0 0 20px rgba(255, 107, 107, 0.6),
+    0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes comboPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

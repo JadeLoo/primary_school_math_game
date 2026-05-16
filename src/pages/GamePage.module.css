@@ -1,0 +1,325 @@
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 16px;
+  background: linear-gradient(180deg, #E8F4FD 0%, #FFF8E7 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== 顶部栏 ===== */
+.topBar {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.exitBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  font-size: 1.1rem;
+  color: #999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  flex-shrink: 0;
+}
+
+.progress {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+  justify-content: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  transition: all 0.3s;
+}
+
+.dotDone {
+  background: #52C41A;
+}
+
+.dotCurrent {
+  transform: scale(1.4);
+  background: #4A90D9;
+}
+
+.progressText {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #888;
+  min-width: 30px;
+  text-align: right;
+}
+
+/* ===== 连击横幅 ===== */
+.comboBanner {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  animation: comboIn 0.4s ease-out, comboOut 0.4s ease-in 1.1s forwards;
+}
+
+.comboText {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #FF6B6B;
+  text-shadow: 0 2px 12px rgba(255,107,107,0.5);
+  white-space: nowrap;
+}
+
+@keyframes comboIn {
+  from { opacity: 0; transform: translateX(-50%) scale(0.5); }
+  to { opacity: 1; transform: translateX(-50%) scale(1.1); }
+}
+
+@keyframes comboOut {
+  from { opacity: 1; }
+  to { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+}
+
+/* ===== 题目卡片 ===== */
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  padding: 32px 24px;
+  width: 100%;
+  max-width: 420px;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.question {
+  text-align: center;
+  width: 100%;
+}
+
+.expressionLarge {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.8;
+  letter-spacing: 2px;
+}
+
+.askText {
+  font-size: 0.95rem;
+  color: #999;
+  margin-top: 8px;
+}
+
+.givenValues {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.givenItem {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #4A90D9;
+  background: #EBF4FD;
+  padding: 4px 16px;
+  border-radius: 8px;
+}
+
+/* ===== 竖式 ===== */
+.vertical {
+  font-family: 'Courier New', monospace;
+  display: inline-block;
+}
+
+.verticalRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.verticalCell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 48px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-bottom: 3px solid #ddd;
+}
+
+.verticalOp {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.verticalPad {
+  width: 40px;
+}
+
+.verticalLine {
+  height: 3px;
+  background: #333;
+  width: 100%;
+  margin: 4px 0;
+}
+
+/* ===== 答案输入区 ===== */
+.answerSection {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+
+.inputRow:hover {
+  background: rgba(74, 144, 217, 0.06);
+}
+
+.symbolLabel {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.answerInput {
+  width: 64px;
+  height: 52px;
+  border: 3px solid #e0e0e0;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: white;
+  transition: border-color 0.3s;
+}
+
+.answerInput:focus {
+  border-color: #4A90D9;
+}
+
+.inputFocused {
+  border-color: #4A90D9 !important;
+  box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.25);
+  transform: scale(1.05);
+}
+
+.inputCorrect {
+  border-color: #52C41A !important;
+  background: #F6FFED;
+}
+
+.inputWrong {
+  border-color: #FF4D4F !important;
+  background: #FFF2F0;
+}
+
+/* ===== 反馈 ===== */
+.feedback {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  animation: fadeIn 0.3s;
+}
+
+.feedbackCorrect {
+  background: #F6FFED;
+  color: #52C41A;
+}
+
+.feedbackWrong {
+  background: #FFF2F0;
+  color: #FF4D4F;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== 数字键盘 ===== */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 12px;
+}
+
+.key {
+  height: 52px;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: white;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.1s, background 0.2s;
+}
+
+.key:active:not(:disabled) {
+  transform: scale(0.93);
+  background: #f0f0f0;
+}
+
+.key:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.keySubmit {
+  background: linear-gradient(135deg, #4A90D9, #357ABD);
+  color: white;
+  grid-column: span 1;
+}
+
+.keySubmit:active {
+  background: #357ABD;
+}
+
+.keyNext {
+  background: linear-gradient(135deg, #52C41A, #389E0D);
+  color: white;
+  grid-column: span 1;
+}
+
+.voiceBtn {
+  background: none;
+  font-size: 0.9rem;
+  color: #999;
+  padding: 8px;
+}

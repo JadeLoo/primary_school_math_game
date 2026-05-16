@@ -1,0 +1,154 @@
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 16px;
+  background: linear-gradient(180deg, #E8F8E0 0%, #FFF8E7 50%, #E8F4FD 100%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.backBtn {
+  background: white;
+  border-radius: 24px;
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  color: #666;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.starBadge {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 24px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.mapTitle {
+  font-size: 1.5rem;
+  color: #555;
+  margin: 0;
+}
+
+.collectionBtn {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(255, 165, 0, 0.3);
+}
+
+.map {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.zone {
+  background: rgba(255,255,255,0.7);
+  border-radius: 20px;
+  padding: 12px 16px;
+}
+
+.zoneLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.zoneIcon {
+  font-size: 1.3rem;
+}
+
+.levelRow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.levelWrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.connector {
+  width: 24px;
+  height: 3px;
+  background: #ddd;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.connector.active {
+  background: #FFD700;
+}
+
+.levelNode {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.levelNode.unlocked:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.levelNode.locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.levelNum {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #555;
+}
+
+.levelStars {
+  font-size: 0.65rem;
+  color: #FFD700;
+}
+
+.boss {
+  width: 82px;
+  height: 82px;
+  border-width: 4px;
+}
+
+.bossCrown {
+  position: absolute;
+  top: -14px;
+  right: -4px;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,136 @@
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(180deg, #FFF8E7 0%, #F0E6FF 100%);
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 32px;
+}
+
+/* ===== 星星 ===== */
+.starsRow {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.star {
+  font-size: 4rem;
+  transition: transform 0.5s, color 0.5s;
+}
+
+.starEmpty {
+  color: #e0e0e0;
+}
+
+.starEarned {
+  color: #FFD700;
+  animation: starPop 0.6s ease-out forwards;
+  text-shadow: 0 4px 16px rgba(255, 215, 0, 0.5);
+}
+
+@keyframes starPop {
+  0% { transform: scale(0) rotate(-30deg); }
+  60% { transform: scale(1.3) rotate(10deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* ===== 统计 ===== */
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: white;
+  border-radius: 16px;
+  padding: 16px 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #4A90D9;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.statDivider {
+  width: 1px;
+  height: 36px;
+  background: #eee;
+}
+
+/* ===== 鼓励语 ===== */
+.encouragement {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 36px;
+}
+
+/* ===== 按钮 ===== */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.btnRetry {
+  background: linear-gradient(135deg, #FFB347, #FF8C00);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(255, 140, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.btnRetry:hover {
+  transform: scale(1.03);
+}
+
+.btnNext {
+  background: linear-gradient(135deg, #4A90D9, #357ABD);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 14px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(74, 144, 217, 0.3);
+  transition: transform 0.2s;
+}
+
+.btnNext:hover {
+  transform: scale(1.03);
+}
+
+.btnMap {
+  background: white;
+  color: #888;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}

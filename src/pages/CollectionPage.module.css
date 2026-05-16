@@ -1,0 +1,94 @@
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 16px;
+  background: linear-gradient(180deg, #FFF8E7 0%, #F0E6FF 100%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.backBtn {
+  background: white;
+  border-radius: 24px;
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  color: #666;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.count {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #4A90D9;
+  background: white;
+  padding: 6px 16px;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.prizeCard {
+  aspect-ratio: 1;
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.prizeCard.earned:hover {
+  transform: scale(1.05);
+}
+
+.prizeCard.locked {
+  opacity: 0.4;
+}
+
+.prizeIcon {
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.prizeLevel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #888;
+}
+
+.prizeZone {
+  font-size: 0.65rem;
+  color: #bbb;
+}
+
+.earnedBadge {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 0.75rem;
+  color: #52C41A;
+  font-weight: 800;
+}
