@@ -1,6 +1,7 @@
 import { createContext, useContext, useReducer, useCallback, type ReactNode } from 'react';
 import type { GameSave, GameSession, Question } from '../types';
 import { LEVEL_CONFIGS, generateQuestions } from '../engine/generator';
+import { checkAnswer } from '../engine/validator';
 
 const SAVE_KEY = 'math_game_save';
 
@@ -151,7 +152,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
   const answerQuestion = useCallback((answerValues: number[]): boolean => {
     if (!state.session) return false;
     const q = state.session.questions[state.session.currentIndex];
-    const isCorrect = q.answers.every((a, i) => a.answer === answerValues[i]);
+    const isCorrect = checkAnswer(q, answerValues);
     dispatch({ type: 'ANSWER_QUESTION', answerValues, isCorrect });
     return isCorrect;
   }, [state.session]);
