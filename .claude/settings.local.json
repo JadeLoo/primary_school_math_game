@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://api.github.com/repos/JadeLoo/primary_school_math_game/deployments/4783271823/statuses\")",
+      "Bash(curl -s \"https://api.github.com/repos/JadeLoo/primary_school_math_game/actions/runs/26288654757/jobs\")",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(f'{j[\\\\\"name\\\\\"]}: {j[\\\\\"conclusion\\\\\"]}'\\) for j in data.get\\('jobs',[]\\)]\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://jadeloo.github.io/primary_school_math_game/?v=$\\(date +%s\\)\")",
+      "Bash(curl -s \"https://jadeloo.github.io/primary_school_math_game/?v=2\")"
+    ]
+  }
+}
